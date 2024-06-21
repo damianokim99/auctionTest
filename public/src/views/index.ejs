@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My EJS Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My EJS Page</h1>
+    </header>
+    <main>
+        <h2>Dynamic Content</h2>
+        <p>The current date and time is: <%= new Date().toLocaleString() %></p>
+        <ul>
+            <% items.forEach(function(item) { %>
+                <li><%= item %></li>
+            <% }) %>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 My EJS Page</p>
+    </footer>
+</body>
+</html>
